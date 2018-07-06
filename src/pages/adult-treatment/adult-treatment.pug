@@ -1,0 +1,19 @@
+.adulttreatment
+  Loader(v-show='loading')
+  div(v-if='props')
+      .home_content
+  #page(v-if='props')
+    .home_banner
+      .outerwrap
+        .wrapper
+         Header
+         #content_center
+           .concent                           
+             .welcome
+                .left
+                 .home-content(v-html='props.content.rendered')
+                .right
+                 Sidebar
+        Footer
+
+

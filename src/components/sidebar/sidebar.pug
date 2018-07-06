@@ -1,0 +1,18 @@
+.sidebar-content
+  .callouts2(v-if='props')     
+    a.call_forms(href='https://goo.gl/UIPSGY' target='_blank') Write a Review
+    router-link.call_forms(to='/first-visit') New Patient Forms
+    router-link.call_app(to='/appointment-request') Appointment Request   
+  .r_links    
+    a.cp_reach(href='http://www.myreachportal.com/' target='_blank')
+      img(v-bind:src="props.acf.side_bars")
+    a.r_care(href='http://www.carecredit.com/' target='_blank')
+      img(v-bind:src="props.acf.side_bar1")
+    a.r_banc(href='https://www.orthobanc.com/' target='_blank')
+      img(v-bind:src="props.acf.side_bar2")
+    a.r_review(href='https://goo.gl/UIPSGY/' target='_blank')
+      img(v-bind:src="props.acf.side_bar3")  
+    a.yelp(href='https://www.yelp.com/biz/beaumont-orthodontics-beaumont' target='_blank')
+      img(v-bind:src="props.acf.side_bar4" alt='Beaumont Orthodontics' width='150' height='20') 
+           
+    

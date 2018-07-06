@@ -1,0 +1,90 @@
+#mainmenu1.navigation
+  ul#mainmenu
+    li
+     router-link(to='/') Home
+    li
+     router-link(to='',id='first') Office Info
+      span.dropdown(onclick='subMOpen2()')
+      ul.submenu#dropdown2
+       li
+        router-link(to='/meet-the-doctors', onclick='active1()') Meet the Doctors
+       li
+        router-link(to='/meet-our-staff', onclick='active1()') Meet Our Staff
+       li
+        router-link(to='/office-policies-and-mission', onclick='active1()') Office Policies and Mission
+       li
+        router-link(to='/map-and-directions', onclick='active1()') Map and Directions
+       li
+        router-link(to='/financial-and-insurance', onclick='active1()') Financial and Insurance
+       li
+        router-link(to='/patient-testimonials', onclick='active1()') Patient Testimonials
+       li
+        router-link(to='/office-tour-and-photo-gallery', onclick='active1()') Office Tour and Photo Gallery
+       li
+        router-link(to='/refer-our-office', onclick='active1()') Refer Our Office
+       li
+        router-link(to='/practice-events', onclick='active1()') Practice Events
+       li
+        router-link(to='/appointment-request', onclick='active1()') Appointment Request
+       li
+        router-link(to='/our-beaumont-tx-office', onclick='active1()') Our Beaumont TX Office
+    li
+     router-link(to='',id='two') Patient Info
+      span.dropdown(onclick='subMOpen3()')
+      ul.submenu#dropdown3
+       li
+        router-link(to='/why-choose-us', onclick='active2()') Why Choose Us
+       li
+        router-link(to='/first-visit', onclick='active2()') First Visit
+       li
+        router-link(to='/faq', onclick='active2()') FAQ
+       li
+        router-link(to='/before-and-after-photos', onclick='active2()') Before and After Photos
+       li
+        router-link(to='/brushing-and-flossing', onclick='active2()') Brushing and Flossing          
+    li
+     router-link(to='',id='three') Treatment Info
+      span.dropdown(onclick='subMOpen4()')  
+      ul.submenu#dropdown4       
+       li
+        router-link(to='/early-treatment', onclick='active3()') Early Treatment
+       li
+        router-link(to='/phase-ii-adolescent-treatment', onclick='active3()') Phase II / Adolescent Treatment
+       li
+        router-link(to='/adult-treatment', onclick='active3()') Adult Treatment
+       li
+        router-link(to='/types-of-braces', onclick='active3()') Types of Braces
+       li
+        router-link(to='/invisalign', onclick='active3()') Invisalign
+       li
+        router-link(to='/retention', onclick='active3()') Retention
+       li
+        router-link(to='/jaw-surgery', onclick='active3()') Jaw Surgery
+       li
+        router-link(to='/tmj', onclick='active3()') TMJ       
+       li
+        router-link(to='/palatal-expander', onclick='active3()') Palatal Expander         
+    li.funtabbar
+     router-link(to='',id='four') Fun Stuff
+      span.dropdown(onclick='subMOpen5()')
+      ul.submenu#dropdown5
+       li
+        router-link(to='/games', onclick='active4()') Games
+       li
+        router-link(to='/band-color-chooser', onclick='active4()') Band Color Chooser
+       li
+        router-link(to='/related-links', onclick='active4()') Related Links
+       li
+        router-link(to='/patient-gallery', onclick='active4()') Patient Gallery
+       li
+        router-link(to='/glossary', onclick='active4()') Glossary
+       li
+        router-link(to='/parts-of-braces', onclick='active4()') Parts of Braces
+       li
+        router-link(to='/feedback', onclick='active4()') Feedback
+       li
+        router-link(to='/blog', onclick='active4()') Blog 
+    li
+     router-link(to='/contact-us') Contact Us     
+
+

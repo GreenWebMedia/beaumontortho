@@ -1,0 +1,46 @@
+.feedback
+  Loader(v-show='loading')
+  div(v-if='props')
+      .home_content
+  #page(v-if='props')
+    .home_banner
+      .outerwrap
+        .wrapper
+         Header
+         #content_center
+           .concent                           
+             .welcome.allfrmptags
+                .left
+                 .home-content(v-html='props.content.rendered')            
+                .right
+                 Sidebar                 
+                .left                 
+                .main-form
+                  .innerapp
+                    form(action='https://beaumontortho.com/email/', method='post')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Name
+                       input(type='text' name='yourName' id='yourName')                       
+                     .formboxes
+                       .allrt
+                         span *
+                         | Email 
+                       input(type='text' name='EmailId' id='EmailId')         
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Feedback 
+                       textarea(name='yourFeedback' id='yourFeedback')    
+                     .formboxes
+                       .captcha 
+                         vue-recaptcha(sitekey='6LfwfFwUAAAAAAUsIWtZ8aO3BS4O8lHPBoIwF7oi' badge='inline') 
+                     .formboxes
+                       .allrt.buttonallrt
+                         input(type='hidden' name='form_type' value='Feedback')
+                         input(type='submit' value='Submit Feedback' onclick='return validateFeedback()') 
+                                         
+        Footer
+
+

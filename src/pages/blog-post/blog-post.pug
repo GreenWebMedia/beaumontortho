@@ -1,0 +1,45 @@
+.pages-whatsnew
+  loader(v-show='loading')
+  header#header
+  .container
+    .header-wrap
+      .header-logo
+        router-link(to='/')
+          logo
+      .header-slider
+        .header-slider-inner
+          img.slimgN(src='http://grayorthodontics.rgwplogin.com/wp-content/uploads/2018/05/our-blog.png')
+      navigation
+  section#content-area
+    #content-wrap
+      .container
+        .content-wrap-inner.content-wrap-inner-page
+          sidebar
+          article#content
+              .blog-form
+               form#blog_search(action='/', method='get')
+                label(for='blog_search_term') Search Blog:
+                input#blog_search_term(name='s', type='text')
+                button.button.button-small.box-round Search
+              header.child
+                #post-572.post
+                  h2
+                    a(href='#', rel='bookmark', title='Permanent Link to Thank You') {{props.title.rendered}}
+                  h3 {{props.date.slice(0,4)}}-{{props.date.slice(5,7)}}-{{props.date.slice(8,10)}}
+                  .entry
+                    p(v-html='props.content.rendered')
+                  .entry_meta
+                  p.entry_tag_links
+                    | Tags: 
+                    span(v-for='tag in props.pure_taxonomies.tags')
+                     router-link(:to='"#" + tag.slug') {{tag.name}} ,
+                    |
+                  p.entry_category_links
+                    | Posted in 
+                    span(v-for='cat in props.pure_taxonomies.categories')
+                     router-link(:to='"#" + cat.slug') {{cat.name}} ,
+                    | 
+                p.back-to-top(onclick='topFunction()')
+                  a Back to top
+                .clear
+  Footer

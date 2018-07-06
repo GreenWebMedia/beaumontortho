@@ -1,0 +1,7 @@
+.revisions(:class="{ 'revisions--active': active}", v-if='dev')
+  .revisions__button(@click='active = true', v-show='!active')
+    span
+    span
+  .revisions__form(v-show='active')
+    .revisions__close(@click='active = false') CLOSE
+    iframe(src='https://docs.google.com/forms/d/e/1FAIpQLScvQyIzEERaPDDyKzLKZl1YEJPgZ-8ak0z4oEv8JBTAB0UUnQ/viewform?embedded=true', frameborder='0', marginheight='0', marginwidth='0') Loading...

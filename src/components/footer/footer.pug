@@ -1,0 +1,17 @@
+footer.footer
+  .wrapper
+   .f_links
+     a(v-if='props' v-for='clientList in props.acf.client_lists')(v-bind:href='clientList.client_url' target='_blank')
+      img(v-bind:src='clientList.client_logo')
+     .f_address
+       span(v-html='props.acf.suite_c')
+  .seo
+    router-link.directory(to='/site-directory' target='_blank') Site Map | 
+     span(v-html='props.acf.copy_right')
+    router-link(to='/' target='_blank') All Rights Reserved     
+    |  | 
+    router-link(to='/privacy-policy' target='_blank') Privacy Policy
+  #backTop.back-bar(href='#' v-scroll-to="'#page'")
+   a(herf='') hello
+       
+    

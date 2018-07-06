@@ -1,0 +1,118 @@
+.referouroffice
+  Loader(v-show='loading')
+  div(v-if='props')
+      .home_content
+  #page(v-if='props')
+    .home_banner
+      .outerwrap
+        .wrapper
+         Header
+         #content_center
+           .concent                           
+             .welcome.allfrmptags
+                .left
+                 .home-content(v-html='props.content.rendered')            
+                .right
+                 Sidebar
+                h2 Refer a Friend
+                .left
+                 p
+                  | If you are a patient of record who has referred a new patient to us, please let us know by filling out and submitting the following form.
+                .main-form.nextmainform
+                 .innerapp
+                   form(action='https://beaumontortho.com/email/', method='post')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Name 
+                       input(type='text' name='flname'  id='flname')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Email 
+                       input(type='email' name='emailID' id='emailID')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Friend's Name 
+                       input(type='friend' name='friendName' id='friendName')
+                     .formboxes
+                       .allrt                         
+                         | Your Friend's Phone Number 
+                       input(type='phone' name='phoneNo' id='phoneNo')
+                     .formboxes
+                       .allrt                         
+                         | Best Time to Call 
+                       input(type='timecall' name='timecall' id='timeCall')
+                     .formboxes
+                       .allrt                         
+                         | Comments or Additional Info 
+                       textarea(name='message')  
+                     .formboxes
+                       .captcha 
+                          vue-recaptcha(sitekey='6LfwfFwUAAAAAAUsIWtZ8aO3BS4O8lHPBoIwF7oi' badge='inline')
+                       .allrt.buttonallrt
+                         input(type='hidden' name='form_type' value='Refer Friend')
+                         input(type='submit' value='Submit Referral' onclick='return validateFRForm()')
+                         p.margin-10 * Required
+                 .clearboth         
+                 h2 Doctor Referral
+                 .left
+                 p
+                  | If you are a doctor who is referring a patient to us, please fill out and submit the following form.
+                 .clearboth 
+                .main-form
+                  .innerapp
+                    form(action='https://beaumontortho.com/email/', method='post')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Today's Date 
+                       input(type='date' name='todayDate'  id='todayDate')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Name 
+                       input(type='text' name='yourName'  id='yourName')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your Practice Name 
+                       input(type='text' name='praticeName'  id='praticeName')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Your E-mail Address 
+                       input(type='email' name='emailID1'  id='emailID1')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Full name of the patient you are referring 
+                       input(type='text' name='referPName' id='referPName')
+                     .formboxes.radioformbox
+                       .allrt                         
+                         | Radiographs Sent? 
+                       .radies
+                        input(type='radio' name='radioGraphs' id="radioGraphs" value='Yes' checked='')
+                        | Yes
+                       .radies
+                        input(type='radio' name='radioGraphs' id="radioGraphs" value='No' checked='')
+                        | No
+                     .formboxes
+                       .allrt                         
+                         | If yes, when were they sent? 
+                       input(type='text' name='theySent' id='theySent')      
+                     .formboxes
+                       .allrt                         
+                         | Comments 
+                       textarea(name='message')  
+                     .formboxes
+                       .captcha 
+                         vue-recaptcha(sitekey='6LfwfFwUAAAAAAUsIWtZ8aO3BS4O8lHPBoIwF7oi' badge='inline')
+                       .allrt.buttonallrt
+                         input(type='hidden' name='form_type' value='Doctor Referral')
+                         input(type='submit' value='Submit Referral' onclick='return validateDRForm()') 
+                         p.margin-10 * Required               
+        Footer
+
+

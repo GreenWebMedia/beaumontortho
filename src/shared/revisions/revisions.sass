@@ -1,0 +1,49 @@
+$red: #ff2626
+$white: #fff
+
+.revisions
+  position: fixed
+  right: 32px
+  bottom: 32px
+
+  &--active
+    width: 500px
+    height: 500px
+
+  &__button
+    border-radius: 50%
+    background-color: $red
+    width: 50px
+    height: 50px
+
+    &:hover
+      cursor: pointer
+
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      background-color: $white
+      width: 25px
+      height: 5px
+
+      &:nth-child(1)
+        top: 25px
+        left: 25%
+        transform: translate(0, -3px) rotate(90deg)
+
+      &:nth-child(2)
+        transform: translate(-50%, -50%)
+
+  &__form
+    iframe
+      border: 2px solid $red
+      width: 500px
+      height: 500px
+
+  &__close
+    text-align: right
+    color: $red
+
+    &:hover
+      cursor: pointer

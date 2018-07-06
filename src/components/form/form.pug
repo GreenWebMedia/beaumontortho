@@ -1,0 +1,21 @@
+.form-main
+  .form-main__success-message(v-if='formSubmitted')
+    h2 Thanks for submitting our form!
+  form.form-main__form(@submit.prevent='validateBeforeSubmit', v-if='!formSubmitted')
+    //- name field
+    .form-main__group
+      label.form-main__label Name
+      input.form-main__input(name='name', v-model='name', :validate="'required|alpha'", :class="{ 'form-main__input--error': errors.has('name') }", type='text', placeholder='Name')
+      span.form-main__group__message(v-show="errors.has('name')") {{ errors.first('name') }}
+    //- email field
+    .form-main__group
+      label.form-main__label Email
+      input.form-main__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-main__input--error': errors.has('email') }", placeholder='Email')
+      span.help.is-danger(v-show="errors.has('email')") {{ errors.first('email') }}
+    //- textarea
+    //-
+      <div class="form-main__group">
+      <label class="form-main__label">Your message</label>
+      <textarea cols="30" rows="10" class="form-main__textarea"></textarea>
+      </div>
+    input.form-main__submit-button(type='submit')

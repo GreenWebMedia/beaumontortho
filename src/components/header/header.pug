@@ -1,0 +1,26 @@
+.header-top
+  header.site_header
+            .tophead(v-if='props')
+              .left
+                .h_address
+                 span(v-html='props.acf.address')                
+              .right
+                .h_phone                 
+                  span(v-html='props.acf.phone')
+                  router-link(to='/' target='_blank') 
+              .middle
+                router-link(to='/')
+                  img(v-bind:src="props.acf.logo.url")                
+            .homeslider
+              .innerslide
+                .header-slider-inner(v-if='props' v-for='actorslider in props.acf.actorslider')
+                  img.slimg(v-bind:src="actorslider.url")
+              .home_social                
+                router-link.blogger_link(to='/' target='_blank')
+                a.fb_link(href='https://www.facebook.com/Beaumontortho' target='_blank')                
+            .test
+              .togglebt(onclick='menuToggle()')
+                span
+                span
+                span 
+              Navigation

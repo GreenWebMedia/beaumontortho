@@ -1,0 +1,23 @@
+.pages-home
+  Loader(v-show='loading')
+      .home_content
+  #page(v-if='props')
+    .home_banner
+      .outerwrap
+        .wrapper
+         Header
+         #content_center
+           .concent
+             .allcalls
+               router-link.call_unique(to='/why-choose-us' target='_blank')
+               router-link.call_doctor(to='/meet-the-doctors' target='_blank')
+               router-link.call_finance(to='/financial-and-insurance' target='_blank')
+               router-link.call_visit(to='/first-visit' target='_blank')              
+             .welcome
+                .left
+                 .home-content(v-html='props.content.rendered')
+                .right
+                 Sidebar
+        Footer
+
+

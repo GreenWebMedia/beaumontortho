@@ -1,0 +1,107 @@
+.appointmentrequest
+  Loader(v-show='loading')
+  div(v-if='props')
+      .home_content
+  #page(v-if='props')
+    .home_banner
+      .outerwrap
+        .wrapper
+         Header
+         #content_center
+           .concent                           
+             .welcome.allfrmptags
+                .left
+                 .home-content(v-html='props.content.rendered')            
+                .right
+                 Sidebar                 
+                .left
+                 h2 Schedule An Appointment For Beaumont & Nederland, TX   Braces
+                 p
+                  | We understand that you have a busy schedule, so we do our best to make scheduling an appointment with us as easy as possible. After filling out our form below, one of our friendly team members will contact you and work with you to schedule an appointment that works with your schedule.
+                 .clearboth 
+                .main-form
+                  .innerapp
+                    form(method='POST' action='https://beaumontortho.com/email/')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Patient Name
+                       input(type='text' v-model='msg' name='paitentName' id='paitentName')
+                     .formboxes.radioformbox
+                       .allrt                         
+                         | New Patient 
+                       .radies
+                        input(type='radio' name='newPaitent' value='yes' id='newPaitent')
+                        | Yes
+                       .radies
+                        input(type='radio' name='newPaitent' value='no' id='newPaitent')
+                        | No  
+                     .formboxes
+                       .allrt
+                         span *
+                         | Email 
+                       input(type='email' v-model='msg' name='emailId' id='emailId')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Address 
+                       input(type='text' v-model='msg' name='address' id='address')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Phone 
+                       input(type='text' v-model='msg' name='phoneNo' id='phoneNo')
+                     .formboxes
+                       .allrt
+                         span *
+                         | Preferred Days 
+                       input(type='text' v-model='msg' name='preferredDays' id='preferredDays')    
+                     .formboxes
+                       .allrt                         
+                         | Convenient Times 
+                       input(type='text' v-model='msg' name='convenientTimes' id='convenientTimes')
+                     .formboxes
+                       .allrt                         
+                         | How did you hear about our practice? 
+                       select#next09(name='hearPractice')
+                        option(value='dentist') Dentist
+                        option(value='advertisement') Advertisement
+                        option(value='friend') A Friend
+                        option(value='internet') Internet
+                        option(value='staff') Staff Member
+                        option(value='yellowpages') Yellow Pages
+                        option(value='other') Other
+                     .formboxes
+                       .allrt                         
+                         | How did you find our web site? 
+                       select#next03(name='findSite')                        
+                          option(value='dentist') Dentist
+                          option(value='search') Search Engine
+                          option(value='advertisement') Advertisement
+                          option(value='friend') A Friend
+                          option(value='other') Other
+    
+                     .formboxes
+                       .allrt
+                         span *
+                         | Name and Address of General Dentist 
+                       textarea(name='nameAddress' id='nameAddress')         
+                     .formboxes
+                       .allrt                         
+                         | Comments 
+                       textarea(name='comments') 
+                     .formboxes
+                       .captcha 
+                         vue-recaptcha(sitekey='6LfwfFwUAAAAAAUsIWtZ8aO3BS4O8lHPBoIwF7oi' badge='inline')
+                     .formboxes
+                       .allrt.buttonallrt
+                         input(type='hidden' name='form_type' value='Appointment Request')
+                         input(type='submit' value='Submit Referral' onclick='return validateAPRForm()') 
+                .clearboth
+                 .left.beauton
+                  h2 Contact Your Local Beaumont TX Orthodontist
+                  p
+                   | We appreciate your interest in our orthodontic practice! Whether you are in need of Nederland TX braces, <a href="/jaw-surgery">jaw surgery</a> in Lumberton TX, or Invisalign in Beaumont TX, our team provides state-of-the-art, custom orthodontic care. <a href="/contact-us">Contact us</a> today or fill out the above form to schedule your appointment. We look forward to hearing from you!                         
+        Footer
+
+
